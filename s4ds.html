@@ -12,6 +12,8 @@
             margin: 0;
             padding: 20px;
             background-image: url("assets/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         h1 {
@@ -23,8 +25,7 @@
             line-height: 1.6;
         }
 
-        a {
-            color: #0056b3;
+        a {  color: #0056b3;
             text-decoration: none;
         }
 
@@ -89,9 +90,9 @@
 </head>
 <body>
     <h1>Welcome to the Sample Page</h1>
-    <p>This is the website of s4ds <a href="https://djss4ds.in">Link</a></p>
+    <p>This is the website of s4ds <a href="https://djss4ds.in" target="_blank">Link</a></p>
 
-    <img src="image.png" alt="Sample Image">
+    <img src="assets/image.png" alt="Sample Image"> 
 
     <form id="loginForm">
         <label for="username">Username:</label>
@@ -109,7 +110,6 @@
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from submitting normally
             
             var username = document.getElementById('name').value;
             var password = document.getElementById('password').value;
