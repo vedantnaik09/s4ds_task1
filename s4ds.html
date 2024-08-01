@@ -12,6 +12,9 @@
             margin: 0;
             padding: 20px;
             background-image: url("assets/bg.jpg");
+            background-size: cover; /*Added code to make background image cover window width and stop it from repeating and centering it*/
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         h1 {
@@ -89,9 +92,9 @@
 </head>
 <body>
     <h1>Welcome to the Sample Page</h1>
-    <p>This is the website of s4ds <a href="https://djss4ds.in">Link</a></p>
+    <p>This is the website of s4ds <a href="https://djss4ds.in" target="_blank">Link</a></p> <!-- added target argument to open in new tab -->
 
-    <img src="image.png" alt="Sample Image">
+    <img src="assets/image.png" alt="Sample Image"> <!-- Changed filepath to show image -->
 
     <form id="loginForm">
         <label for="username">Username:</label>
@@ -111,7 +114,7 @@
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from submitting normally
             
-            var username = document.getElementById('name').value;
+            var username = document.getElementById('username').value; // changed id from name to username
             var password = document.getElementById('password').value;
             
             if (password.length < 8) {
