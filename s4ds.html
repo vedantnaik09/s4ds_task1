@@ -1,125 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sample Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            background-image: url("assets/bg.jpg");
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        background-image: url("assets/bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
 
-        h1 {
-            color: #0056b3;
-        }
+      h1 {
+        color: #0056b3;
+      }
 
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
+      p {
+        font-size: 1.1em;
+        line-height: 1.6;
+      }
 
-        a {
-            color: #0056b3;
-            text-decoration: none;
-        }
+      a {
+        color: #0056b3;
+        text-decoration: none;
+      }
 
-        a:hover {
-            text-decoration: underline;
-        }
+      a:hover {
+        text-decoration: underline;
+      }
 
-        img {
-            max-width: 100%;
-            height: 50px;
-            border: 1px solid #ccc;
-            padding: 5px;
-            background-color: #000000;
-        }
+      img {
+        max-width: 100%;
+        height: 50px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        background-color: #000000;
+      }
 
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            max-width: 400px;
-            margin: 20px 0;
-        }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        max-width: 400px;
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+      }
 
-        label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
 
-        input[type="text"],
-        input[type="password"] {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+      input[type="text"],
+      input[type="password"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
 
-        input[type="submit"] {
-            background-color: #0056b3;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+      input[type="submit"] {
+        background-color: #0056b3;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
 
-        input[type="submit"]:hover {
-            background-color: #004494;
-        }
+      input[type="submit"]:hover {
+        background-color: #004494;
+      }
 
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
 
-        li {
-            margin-bottom: 10px;
-        }
+      li {
+        margin-bottom: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Welcome to the Sample Page</h1>
     <p>This is the website of s4ds <a href="https://djss4ds.in">Link</a></p>
 
-    <img src="image.png" alt="Sample Image">
+    <img src="./assets/image.png" alt="Sample Image" />
 
     <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br>
-        <input type="submit" value="Submit">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <input type="submit" value="Submit" />
     </form>
 
     <ul>
-        <li>First item</li>
-        <li>Second item</li>
-        <li>Third item</li>
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
     </ul>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from submitting normally
-            
-            var username = document.getElementById('name').value;
-            var password = document.getElementById('password').value;
-            
-            if (password.length < 8) {
-                alert("Password less than 8 characters");
-            } else {
-                alert("Username: " + username);
-            }
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form from submitting normally
+
+        // variable should be const if they are referring to some HTML Element
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          if (password.length > 8) {
+            alert("Make sure Password less than 8 characters");
+          } else {
+            alert("Username: " + username + " Successfully logged in :)");
+          }
         });
     </script>
-</body>
+  </body>
 </html>
