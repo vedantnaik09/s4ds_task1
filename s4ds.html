@@ -12,26 +12,24 @@
             margin: 0;
             padding: 20px;
             background-image: url("assets/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         h1 {
             color: #0056b3;
         }
-
         p {
             font-size: 1.1em;
             line-height: 1.6;
         }
-
-        a {
-            color: #0056b3;
+        a {  color: #0056b3;
             text-decoration: none;
         }
 
         a:hover {
             text-decoration: underline;
         }
-
         img {
             max-width: 100%;
             height: 50px;
@@ -39,7 +37,6 @@
             padding: 5px;
             background-color: #000000;
         }
-
         form {
             background-color: #fff;
             padding: 20px;
@@ -48,13 +45,11 @@
             max-width: 400px;
             margin: 20px 0;
         }
-
         label {
             display: block;
             margin-bottom: 10px;
             font-weight: bold;
         }
-
         input[type="text"],
         input[type="password"] {
             width: calc(100% - 22px);
@@ -63,7 +58,6 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-
         input[type="submit"] {
             background-color: #0056b3;
             color: white;
@@ -72,16 +66,13 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
         input[type="submit"]:hover {
             background-color: #004494;
         }
-
         ul {
             list-style-type: disc;
             padding-left: 20px;
         }
-
         li {
             margin-bottom: 10px;
         }
@@ -89,9 +80,8 @@
 </head>
 <body>
     <h1>Welcome to the Sample Page</h1>
-    <p>This is the website of s4ds <a href="https://djss4ds.in">Link</a></p>
-
-    <img src="image.png" alt="Sample Image">
+    <p>This is the website of s4ds <a href="https://djss4ds.in" target="_blank">Link</a></p>
+    <img src="assets/image.png" alt="Sample Image"> 
 
     <form id="loginForm">
         <label for="username">Username:</label>
@@ -100,7 +90,6 @@
         <input type="password" id="password" name="password"><br>
         <input type="submit" value="Submit">
     </form>
-
     <ul>
         <li>First item</li>
         <li>Second item</li>
@@ -110,7 +99,7 @@
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from submitting normally
-            
+
             var username = document.getElementById('name').value;
             var password = document.getElementById('password').value;
             
