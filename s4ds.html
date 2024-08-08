@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,11 @@
             color: #333;
             margin: 0;
             padding: 20px;
-            background-image: url("assets/bg.jpg");
+/            background-image: url("bg.jpg");
+/*             for background to not repeat we used background repeat styler */ 
+            background-repeat: no-repeat;
+            background-position: 100%;
+            background-size: 130%;
         }
 
         h1 {
@@ -89,7 +93,7 @@
 </head>
 <body>
     <h1>Welcome to the Sample Page</h1>
-    <p>This is the website of s4ds <a href="https://djss4ds.in">Link</a></p>
+    <p>This is the website of s4ds <a href="https://djss4ds.in" target="_main" >Link</a></p><!--     added target attribute so that the link opens on new tab -->
 
     <img src="image.png" alt="Sample Image">
 
@@ -111,7 +115,7 @@
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from submitting normally
             
-            var username = document.getElementById('name').value;
+            var username = document.getElementById('username').value;//the id from which the username was coming earlier was different so I changeed the id
             var password = document.getElementById('password').value;
             
             if (password.length < 8) {
