@@ -111,7 +111,7 @@
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from submitting normally
             
-            var username = document.getElementById('name').value;
+            var username = document.getElementById('username').value; // Corrected here
             var password = document.getElementById('password').value;
             
             if (password.length < 8) {
